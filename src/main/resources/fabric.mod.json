@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "biome_enhancements",
+  "version": "${version}",
+
+  "name": "Biome Enhancements Mod",
+  "description": "This is a mod focused on improving the already existing biomes within the game. More specifically, it focuses on the features discussed on the Minecraft feedback site and showcased within the animated Biome Chooser videos on Youtube.",
+  "credits": "Thank you towards Mojang for an incredible game, the community for their feedback and ideas, and both TripAgent and Pererillo for helping create the textures",
+  "authors": [
+    "killerjdog51"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/killerjdog51/Biome-Enhancements"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/biome_enhancements/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.killerjdog51.biome_enhancements.BiomeEnhancements"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.9.0",
+    "fabric": "*",
+    "minecraft": "1.14.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
