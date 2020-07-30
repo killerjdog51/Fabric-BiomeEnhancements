@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "biome_enhancements:baobab_leaves",
+    "biome_enhancements:mangrove_leaves",
+    "biome_enhancements:palm_leaves"
+  ]
+}

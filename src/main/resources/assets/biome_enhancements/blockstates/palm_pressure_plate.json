@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "powered=false": { "model": "biome_enhancements:block/palm_pressure_plate" },
+        "powered=true": { "model": "biome_enhancements:block/palm_pressure_plate_down" }
+    }
+}

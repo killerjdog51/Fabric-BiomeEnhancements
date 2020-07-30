@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "biome_enhancements:baobab_log",
+    "biome_enhancements:baobab_wood",
+    "biome_enhancements:stripped_baobab_log",
+    "biome_enhancements:stripped_baobab_wood"
+  ]
+}

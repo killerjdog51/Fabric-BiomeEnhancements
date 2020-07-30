@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "biome_enhancements:block/baobab_log" },
+        "axis=z":   { "model": "biome_enhancements:block/baobab_log", "x": 90 },
+        "axis=x":   { "model": "biome_enhancements:block/baobab_log", "x": 90, "y": 90 }
+    }
+}

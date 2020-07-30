@@ -1,0 +1,6 @@
+{
+    "parent": "block/leaves",
+    "textures": {
+        "all": "biome_enhancements:blocks/palm_leaves"
+    }
+}

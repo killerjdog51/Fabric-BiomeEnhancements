@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boat",
+  "pattern": [
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "biome_enhancements:mangrove_planks"
+    }
+  },
+  "result": {
+    "item": "minecraft:spruce_boat"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "biome_enhancements:blocks/baobab_log",
+        "side": "biome_enhancements:blocks/baobab_log"
+        
+    }
+}

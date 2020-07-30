@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "biome_enhancements:palm_log",
+    "biome_enhancements:palm_wood",
+    "biome_enhancements:stripped_palm_log",
+    "biome_enhancements:stripped_palm_wood"
+  ]
+}

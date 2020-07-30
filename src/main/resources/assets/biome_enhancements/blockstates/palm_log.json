@@ -1,0 +1,10 @@
+{
+	"variants": {
+	    "facing=up": { "model": "biome_enhancements:block/palm_log" },
+        "facing=down": { "model": "biome_enhancements:block/palm_log", "x":180},
+        "facing=east": { "model": "biome_enhancements:block/palm_log", "x":90, "y":90  },
+        "facing=west": { "model": "biome_enhancements:block/palm_log", "x":90, "y":-90 },
+        "facing=north": { "model": "biome_enhancements:block/palm_log", "x":90 },
+        "facing=south": { "model": "biome_enhancements:block/palm_log", "x":-90}
+	}
+}

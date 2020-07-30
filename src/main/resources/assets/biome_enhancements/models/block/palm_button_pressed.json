@@ -1,0 +1,6 @@
+{
+    "parent": "block/button_pressed",
+    "textures": {
+        "texture": "biome_enhancements:blocks/palm_planks"
+    }
+}

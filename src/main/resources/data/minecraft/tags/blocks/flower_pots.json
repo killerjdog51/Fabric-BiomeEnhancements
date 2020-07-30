@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:flower_pot",
+    "biome_enhancements:potted_baobab_sapling",
+    "biome_enhancements:potted_mangrove_sapling",
+    "biome_enhancements:potted_palm_sapling",
+    "biome_enhancements:potted_desert_candle"
+  ]
+}

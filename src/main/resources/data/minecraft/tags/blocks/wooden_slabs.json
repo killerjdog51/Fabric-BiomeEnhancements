@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "biome_enhancements:baobab_slab",
+    "biome_enhancements:mangrove_slab",
+    "biome_enhancements:palm_slab"
+  ]
+}

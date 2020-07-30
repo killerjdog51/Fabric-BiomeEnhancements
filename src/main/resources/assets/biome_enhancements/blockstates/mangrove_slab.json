@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "biome_enhancements:block/mangrove_slab" },
+        "type=top": { "model": "biome_enhancements:block/mangrove_slab_top" },
+        "type=double": { "model": "biome_enhancements:block/mangrove_planks" }
+    }
+}

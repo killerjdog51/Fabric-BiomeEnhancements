@@ -1,0 +1,6 @@
+{
+    "parent": "block/template_fence_gate",
+    "textures": {
+        "texture": "biome_enhancements:blocks/mangrove_planks"
+    }
+}

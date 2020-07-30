@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "biome_enhancements:blocks/mangrove_planks",
+        "top": "biome_enhancements:blocks/mangrove_planks",
+        "side": "biome_enhancements:blocks/mangrove_planks"
+    }
+}

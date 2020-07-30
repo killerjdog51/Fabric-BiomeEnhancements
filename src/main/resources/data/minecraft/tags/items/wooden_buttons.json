@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "biome_enhancements:baobab_button",
+    "biome_enhancements:mangrove_button",
+    "biome_enhancements:palm_button"
+  ]
+}

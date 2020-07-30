@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "biome_enhancements:palm_logs"
+    }
+  ],
+  "result": {
+    "item": "biome_enhancements:palm_planks",
+    "count": 4
+  }
+}

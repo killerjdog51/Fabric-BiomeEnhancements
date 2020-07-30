@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "biome_enhancements:blocks/baobab_door_bottom",
+        "top": "biome_enhancements:blocks/baobab_door_top"
+    }
+}

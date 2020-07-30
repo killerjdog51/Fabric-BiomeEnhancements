@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    " X "
+  ],
+  "key": {
+    "#": {
+      "item": "biome_enhancements:palm_planks"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "biome_enhancements:palm_sign",
+    "count": 3
+  }
+}

@@ -1,0 +1,37 @@
+{
+	"parent": "block/block",
+    "ambientocclusion": false,
+    "textures": {
+    	"particle": "biome_enhancements:blocks/palm_log",
+        "side": "biome_enhancements:blocks/palm_log",
+        "top": "biome_enhancements:blocks/palm_log_top",
+        "bottom": "biome_enhancements:blocks/palm_log_bottom"
+    },
+    "elements": [
+        {
+            "name": "top",
+            "from": [ 0, 8, 0 ], 
+            "to": [ 16, 16, 16 ], 
+            "faces": {
+                "north": { "texture": "#side", "uv": [ 0, 0, 16, 8 ] },
+                "east": { "texture": "#side", "uv": [ 0, 0, 16, 8 ] },
+                "south": { "texture": "#side", "uv": [ 0, 0, 16, 8 ] },
+                "west": { "texture": "#side", "uv": [ 0, 0, 16, 8 ] },
+                "up": { "texture": "#top", "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#bottom", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "bottom",
+            "from": [ 1, 0, 1 ], 
+            "to": [ 15, 8, 15 ], 
+            "faces": {
+                "north": { "texture": "#side", "uv": [ 1, 8, 15, 16 ] },
+                "east": { "texture": "#side", "uv": [ 1, 8, 15, 16 ] },
+                "south": { "texture": "#side", "uv": [ 1, 8, 15, 16 ] },
+                "west": { "texture": "#side", "uv": [ 1, 8, 15, 16 ] },
+                "down": { "texture": "#bottom", "uv": [ 0, 0, 16, 16 ] }
+            }
+        }
+    ]
+}

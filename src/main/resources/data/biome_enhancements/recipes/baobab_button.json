@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "biome_enhancements:baobab_planks"
+    }
+  ],
+  "result": {
+    "item": "biome_enhancements:baobab_button"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "biome_enhancements:blocks/baobab_sapling"
+    }
+}

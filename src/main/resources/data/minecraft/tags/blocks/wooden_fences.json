@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "biome_enhancements:baobab_fence",
+    "biome_enhancements:mangrove_fence",
+    "biome_enhancements:palm_fence"
+  ]
+}

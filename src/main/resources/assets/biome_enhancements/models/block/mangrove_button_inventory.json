@@ -1,0 +1,6 @@
+{
+    "parent": "block/button_inventory",
+    "textures": {
+        "texture": "biome_enhancements:blocks/mangrove_planks"
+    }
+}

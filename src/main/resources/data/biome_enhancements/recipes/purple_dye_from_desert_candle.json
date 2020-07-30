@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "blue_dye",
+  "ingredients": [
+    {
+      "item": "biome_enhancements:desert_candle"
+    }
+  ],
+  "result": {
+    "item": "minecraft:purple_dye"
+  }
+}

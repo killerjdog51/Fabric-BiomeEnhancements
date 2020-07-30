@@ -1,0 +1,11 @@
+{
+    "parent": "biome_enhancements:block/palm_log",
+    "textures": {
+    	"side": "biome_enhancements:blocks/stripped_palm_log",        
+    	"particle": "biome_enhancements:blocks/stripped_palm_log",
+        "top": "biome_enhancements:blocks/stripped_palm_log_top",
+        "bottom": "biome_enhancements:blocks/stripped_palm_log_top"
+        
+        
+    }
+}

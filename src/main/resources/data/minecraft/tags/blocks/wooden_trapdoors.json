@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "biome_enhancements:baobab_trapdoor",
+    "biome_enhancements:mangrove_trapdoor",
+    "biome_enhancements:palm_trapdoor"
+  ]
+}
