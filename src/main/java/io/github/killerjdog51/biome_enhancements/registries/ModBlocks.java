@@ -1,8 +1,10 @@
 package io.github.killerjdog51.biome_enhancements.registries;
 
 import io.github.killerjdog51.biome_enhancements.BiomeEnhancements;
+import io.github.killerjdog51.biome_enhancements.blocks.MangroveSaplingBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.ModDoorBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.ModPressurePlateBlock;
+import io.github.killerjdog51.biome_enhancements.blocks.ModSaplingBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.ModStairsBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.ModStandingSignBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.ModTrapDoorBlock;
@@ -10,16 +12,23 @@ import io.github.killerjdog51.biome_enhancements.blocks.ModWallSignBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.ModWoodButtonBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.PalmLeavesBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.PalmLogBlock;
+import io.github.killerjdog51.biome_enhancements.blocks.PalmSaplingBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.RotatedBlock;
+import io.github.killerjdog51.biome_enhancements.blocks.sapling.BaobabSaplingGenerator;
+import io.github.killerjdog51.biome_enhancements.blocks.sapling.MangroveSaplingGenerator;
+import io.github.killerjdog51.biome_enhancements.blocks.sapling.PalmSaplingGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.FenceGateBlock;
+import net.minecraft.block.FlowerBlock;
+import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.LogBlock;
 import net.minecraft.block.MaterialColor;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SlabBlock;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -102,6 +111,8 @@ public class ModBlocks
 	public static Block POTTED_PALM_SAPLING;
 	public static Block POTTED_DESERT_CANDLE;
 	
+	public static Block COCONUT;
+	public static Block DATES;
 	
 	public static void init()
 	{
@@ -180,7 +191,30 @@ public class ModBlocks
 		PALM_WALL_SIGN = new ModWallSignBlock(Block.Settings.copy(Blocks.OAK_WALL_SIGN));
 		Registry.register(Registry.BLOCK, new Identifier(BiomeEnhancements.MOD_ID, "palm_sign"), PALM_SIGN);
 		Registry.register(Registry.BLOCK, new Identifier(BiomeEnhancements.MOD_ID, "palm_wall_sign"), PALM_WALL_SIGN);
+		
+		BAOBAB_SAPLING = register("baobab_sapling", new ModSaplingBlock(new BaobabSaplingGenerator(), Block.Settings.copy(Blocks.ACACIA_SAPLING)), ItemGroup.DECORATIONS);
+		MANGROVE_SAPLING = register("mangrove_sapling", new MangroveSaplingBlock(new MangroveSaplingGenerator(), Block.Settings.copy(Blocks.SPRUCE_SAPLING)), ItemGroup.DECORATIONS);
+		PALM_SAPLING = register("palm_sapling", new PalmSaplingBlock(new PalmSaplingGenerator(), Block.Settings.copy(Blocks.OAK_SAPLING)), ItemGroup.DECORATIONS);
+		DESERT_CANDLE = register("desert_candle", new FlowerBlock(StatusEffects.ABSORPTION, 7, Block.Settings.copy(Blocks.DANDELION)), ItemGroup.DECORATIONS);
+		
+		POTTED_BAOBAB_SAPLING = new FlowerPotBlock(BAOBAB_SAPLING, Block.Settings.copy(Blocks.FLOWER_POT));
+		Registry.register(Registry.BLOCK, new Identifier(BiomeEnhancements.MOD_ID, "potted_baobab_sapling"), POTTED_BAOBAB_SAPLING);
+		
+		POTTED_MANGROVE_SAPLING = new FlowerPotBlock(MANGROVE_SAPLING, Block.Settings.copy(Blocks.FLOWER_POT));
+		Registry.register(Registry.BLOCK, new Identifier(BiomeEnhancements.MOD_ID, "potted_mangrove_sapling"), POTTED_MANGROVE_SAPLING);
+		
+		POTTED_PALM_SAPLING = new FlowerPotBlock(PALM_SAPLING, Block.Settings.copy(Blocks.FLOWER_POT));
+		Registry.register(Registry.BLOCK, new Identifier(BiomeEnhancements.MOD_ID, "potted_palm_sapling"), POTTED_PALM_SAPLING);
+		
+		POTTED_DESERT_CANDLE = new FlowerPotBlock(DESERT_CANDLE, Block.Settings.copy(Blocks.FLOWER_POT));
+		Registry.register(Registry.BLOCK, new Identifier(BiomeEnhancements.MOD_ID, "potted_desert_candle"), POTTED_DESERT_CANDLE);
 
+		// These are just placeholders until I officially implement these crops. 
+		COCONUT = new Block(Block.Settings.copy(Blocks.COCOA));
+		Registry.register(Registry.BLOCK, new Identifier(BiomeEnhancements.MOD_ID, "coconut"), COCONUT);
+		
+		DATES = new Block(Block.Settings.copy(Blocks.COCOA));
+		Registry.register(Registry.BLOCK, new Identifier(BiomeEnhancements.MOD_ID, "dates"), DATES);
 	}
 	
 	public static Block register(String name, Block block, ItemGroup group)

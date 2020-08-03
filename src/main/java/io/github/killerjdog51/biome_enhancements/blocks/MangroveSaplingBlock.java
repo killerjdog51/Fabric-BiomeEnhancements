@@ -2,7 +2,6 @@ package io.github.killerjdog51.biome_enhancements.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.Waterloggable;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.fluid.FluidState;
@@ -16,7 +15,8 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 
-public class MangroveSaplingBlock extends SaplingBlock  implements Waterloggable {
+// We want this tree to be grown in/under water
+public class MangroveSaplingBlock extends ModSaplingBlock  implements Waterloggable {
 
 	public static final BooleanProperty WATERLOGGED;
 
@@ -31,12 +31,14 @@ public class MangroveSaplingBlock extends SaplingBlock  implements Waterloggable
 	      return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
 	}
 	
+	// This checks if the block is waterlogged when initially placed in the world
 	@Override
 	public void onBlockAdded(BlockState state, World worldIn, BlockPos pos, BlockState oldState, boolean isMoving)
 	{
 		worldIn.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
 	}
 	
+	// This will allow the block to be waterlogged after placement
 	@Override
 	public BlockState getPlacementState(ItemPlacementContext context) {
 	      BlockPos blockpos = context.getBlockPos();
@@ -45,6 +47,7 @@ public class MangroveSaplingBlock extends SaplingBlock  implements Waterloggable
 	      return blockstate;
 	   }
 	
+	// This helps update the block property
 	@Override
 	public BlockState getStateForNeighborUpdate(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
 	{
@@ -54,7 +57,7 @@ public class MangroveSaplingBlock extends SaplingBlock  implements Waterloggable
 		return super.getStateForNeighborUpdate(stateIn, facing, facingState, worldIn, currentPos, facingPos);
 	}
 	
-	
+	// This is how the property is implemented into the block
 	@Override
 	protected void appendProperties(StateManager.Builder<Block, BlockState> builder)
 	{
@@ -62,6 +65,7 @@ public class MangroveSaplingBlock extends SaplingBlock  implements Waterloggable
 	      super.appendProperties(builder);
 	}
 	
+	// This is where we set the property value
 	static
 	{
 		WATERLOGGED = Properties.WATERLOGGED;
