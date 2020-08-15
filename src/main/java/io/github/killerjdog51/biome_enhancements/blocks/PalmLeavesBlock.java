@@ -125,7 +125,7 @@ public class PalmLeavesBlock extends LeavesBlock {
 	   }
 	   
 	   // We want Palm trees to grow two different crops (or no crops too)
-	   public static enum Type implements StringIdentifiable{
+	   public static enum Type implements StringIdentifiable {
 		      NORMAL(Blocks.AIR, "normal"),
 		      COCONUT(ModBlocks.COCONUT, "coconut"),
 		      DATE(ModBlocks.DATES, "date");

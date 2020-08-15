@@ -13,7 +13,6 @@ import io.github.killerjdog51.biome_enhancements.blocks.ModWoodButtonBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.PalmLeavesBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.PalmLogBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.PalmSaplingBlock;
-import io.github.killerjdog51.biome_enhancements.blocks.RotatedBlock;
 import io.github.killerjdog51.biome_enhancements.blocks.sapling.BaobabSaplingGenerator;
 import io.github.killerjdog51.biome_enhancements.blocks.sapling.MangroveSaplingGenerator;
 import io.github.killerjdog51.biome_enhancements.blocks.sapling.PalmSaplingGenerator;
@@ -26,6 +25,7 @@ import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.LogBlock;
 import net.minecraft.block.MaterialColor;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.entity.effect.StatusEffects;
@@ -124,17 +124,17 @@ public class ModBlocks
 		MANGROVE_LOG = register("mangrove_log", new LogBlock(MaterialColor.GREEN, Block.Settings.copy(Blocks.SPRUCE_LOG)), ItemGroup.BUILDING_BLOCKS);
 		PALM_LOG = register("palm_log", new PalmLogBlock(Block.Settings.copy(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
 		
-		BAOBAB_WOOD = register("baobab_wood", new RotatedBlock(Block.Settings.copy(Blocks.ACACIA_WOOD)), ItemGroup.BUILDING_BLOCKS);
-		MANGROVE_WOOD = register("mangrove_wood", new RotatedBlock(Block.Settings.copy(Blocks.SPRUCE_WOOD)), ItemGroup.BUILDING_BLOCKS);
-		PALM_WOOD = register("palm_wood", new RotatedBlock(Block.Settings.copy(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
+		BAOBAB_WOOD = register("baobab_wood", new PillarBlock(Block.Settings.copy(Blocks.ACACIA_WOOD)), ItemGroup.BUILDING_BLOCKS);
+		MANGROVE_WOOD = register("mangrove_wood", new PillarBlock(Block.Settings.copy(Blocks.SPRUCE_WOOD)), ItemGroup.BUILDING_BLOCKS);
+		PALM_WOOD = register("palm_wood", new PillarBlock(Block.Settings.copy(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
 		
 		STRIPPED_BAOBAB_LOG = register("stripped_baobab_log", new LogBlock(MaterialColor.ORANGE, Block.Settings.copy(Blocks.ACACIA_LOG)), ItemGroup.BUILDING_BLOCKS);
 		STRIPPED_MANGROVE_LOG = register("stripped_mangrove_log", new LogBlock(MaterialColor.GREEN, Block.Settings.copy(Blocks.SPRUCE_LOG)), ItemGroup.BUILDING_BLOCKS);
 		STRIPPED_PALM_LOG = register("stripped_palm_log", new PalmLogBlock(Block.Settings.copy(Blocks.OAK_LOG)), ItemGroup.BUILDING_BLOCKS);
 		
-		STRIPPED_BAOBAB_WOOD = register("stripped_baobab_wood", new RotatedBlock(Block.Settings.copy(Blocks.ACACIA_WOOD)), ItemGroup.BUILDING_BLOCKS);
-		STRIPPED_MANGROVE_WOOD = register("stripped_mangrove_wood", new RotatedBlock(Block.Settings.copy(Blocks.SPRUCE_WOOD)), ItemGroup.BUILDING_BLOCKS);
-		STRIPPED_PALM_WOOD = register("stripped_palm_wood", new RotatedBlock(Block.Settings.copy(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
+		STRIPPED_BAOBAB_WOOD = register("stripped_baobab_wood", new PillarBlock(Block.Settings.copy(Blocks.ACACIA_WOOD)), ItemGroup.BUILDING_BLOCKS);
+		STRIPPED_MANGROVE_WOOD = register("stripped_mangrove_wood", new PillarBlock(Block.Settings.copy(Blocks.SPRUCE_WOOD)), ItemGroup.BUILDING_BLOCKS);
+		STRIPPED_PALM_WOOD = register("stripped_palm_wood", new PillarBlock(Block.Settings.copy(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS);
 		
 		BAOBAB_LEAVES = register("baobab_leaves", new LeavesBlock(Block.Settings.copy(Blocks.ACACIA_LEAVES)), ItemGroup.DECORATIONS);
 		MANGROVE_LEAVES = register("mangrove_leaves", new LeavesBlock(Block.Settings.copy(Blocks.SPRUCE_LEAVES)), ItemGroup.DECORATIONS);

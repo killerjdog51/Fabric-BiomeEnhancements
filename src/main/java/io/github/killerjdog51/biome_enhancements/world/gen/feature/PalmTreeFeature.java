@@ -8,11 +8,13 @@ import com.mojang.datafixers.Dynamic;
 
 import io.github.killerjdog51.biome_enhancements.blocks.PalmLeavesBlock;
 import io.github.killerjdog51.biome_enhancements.registries.ModBlocks;
+import io.github.killerjdog51.biome_enhancements.registries.ModWorldGeneration;
 import net.minecraft.block.BlockState;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockBox;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.world.ChunkRegion;
 import net.minecraft.world.ModifiableTestableWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
@@ -157,8 +159,27 @@ public class PalmTreeFeature extends AbstractTreeFeature<DefaultFeatureConfig>
 	// I want the Palm tree to grow two different crops, so this sets the leaves to the specific type.
 	private void SetLeafType(ModifiableTestableWorld worldIn, BlockPos pos, Random rand)
 	{
-		World world = (World) worldIn;
-		Biome biome = world.getBiome(pos);
+		
+		Biome biome = null;
+		
+		// Test if the tree is generated naturally (ChunkRegion) or generated from a sapling (World)
+		if (worldIn instanceof ChunkRegion)
+		{
+			ChunkRegion chunk = (ChunkRegion) worldIn;
+			biome = chunk.getBiome(pos);
+		}
+		else if (worldIn instanceof World)
+		{
+			World world = (World) worldIn;
+			biome = world.getBiome(pos);
+		}
+		// Something went wrong
+		else
+		{
+			LEAF = ModBlocks.PALM_LEAVES.getDefaultState().with(PalmLeavesBlock.TYPE, PalmLeavesBlock.Type.NORMAL);
+			return;
+		}
+		
 		double temp = biome.getTemperature();
 		
 		// Logically Palm trees shouldn't even grow in too cold or too hot of climates, but since this is Minecraft they just won't grow fruit
@@ -168,7 +189,7 @@ public class PalmTreeFeature extends AbstractTreeFeature<DefaultFeatureConfig>
 		}
 		
 		// If a Palm tree is generated in a desert/arid climate we only want dates to grow
-		else if ( temp >= 2.0D)
+		else if ( biome.equals(ModWorldGeneration.OASIS) || temp >= 1.9D)
 		{
 			LEAF = ModBlocks.PALM_LEAVES.getDefaultState().with(PalmLeavesBlock.TYPE, PalmLeavesBlock.Type.DATE);
 		}

@@ -16,6 +16,7 @@ public class BlockColorHandler
 		registerBlockColourHandlers();
 		registerItemColourHandlers();
 	}
+	
 	@Environment(EnvType.CLIENT)
 	public static void registerBlockColourHandlers()
 	{

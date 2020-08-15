@@ -50,7 +50,9 @@
 "block.biome_enhancements.palm_door":"Palm Door",
 "block.biome_enhancements.palm_trapdoor":"Palm Trapdoor",
 
-"block.biome_enhancements.desert_candle":"Desert Candle"
+"block.biome_enhancements.desert_candle":"Desert Candle",
 
+
+"biome.biome_enhancements.oasis":"Oasis"
 
 }

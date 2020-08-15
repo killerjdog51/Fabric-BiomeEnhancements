@@ -15,6 +15,7 @@ public class ModSignItem extends SignItem{
 		super(settings, floorBlock, wallBlock);
 	}
 
+	// Open the sign edit screen and Mod Sign Entity once placed
 	@Override
 	protected boolean postPlacement(BlockPos pos, World worldIn, PlayerEntity player, ItemStack stack, BlockState state) {
 	      boolean flag = super.postPlacement(pos, worldIn, player, stack, state);

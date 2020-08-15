@@ -447,11 +447,32 @@ public class BaobabTreeFeature extends AbstractTreeFeature<DefaultFeatureConfig>
 	// Check if the tree can generate on the block underneath
 	private boolean ensureDirtsUnderneath(BlockPos pos, ModifiableTestableWorld worldIn)
    {
+		boolean flag = false;
        BlockPos down = pos.down();
        BlockState blockstate = Blocks.AIR.getDefaultState();
 
        // If the block underneath is considered to be a dirt variant then we set all the blocks below our saplings to dirt
        if (isNaturalDirtOrGrass(worldIn, down))
+       {
+    	   // We don't want our tree to float in mid-air when generating though, so we make sure all the blocks under the tree are dirt
+    	   for (int x = 0; x < 4; x++)
+    	   {
+    		   for (int z = 0; z < 4; z++)
+    		   {
+    			   BlockPos blockpos = down.add(x, 0, z);
+    			   if ( isNaturalDirtOrGrass(worldIn, blockpos))
+    			   {
+    				   flag = true;
+    			   }
+    			   else
+    			   {
+    				   flag = false;
+    			   }
+    		   }
+    		   
+    	   }
+       }
+       if (flag)
        {
            this.setToDirt(worldIn, down);
            this.setToDirt(worldIn, down.east(1));

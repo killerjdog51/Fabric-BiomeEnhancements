@@ -3,7 +3,9 @@ package io.github.killerjdog51.biome_enhancements;
 import io.github.killerjdog51.biome_enhancements.registries.ModBlockEntities;
 import io.github.killerjdog51.biome_enhancements.registries.ModBlocks;
 import io.github.killerjdog51.biome_enhancements.registries.ModItems;
+import io.github.killerjdog51.biome_enhancements.registries.ModWorldGeneration;
 import io.github.killerjdog51.biome_enhancements.utils.BlockColorHandler;
+import io.github.killerjdog51.biome_enhancements.utils.StrippedLogHandler;
 import net.fabricmc.api.ModInitializer;
 
 public class BiomeEnhancements implements ModInitializer
@@ -18,6 +20,10 @@ public class BiomeEnhancements implements ModInitializer
 		ModBlocks.init();
 		ModBlockEntities.init();
 		ModItems.init();
+		ModWorldGeneration.init();
+		
+		
 		BlockColorHandler.init();
+		StrippedLogHandler.init();
 	}
 }
